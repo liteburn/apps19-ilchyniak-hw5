@@ -16,7 +16,10 @@ public class MapIter implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        return toIter.hasNext();
+        if (toIter.hasNext()){
+            return true;
+        }
+        return false;
     }
 
     @Override

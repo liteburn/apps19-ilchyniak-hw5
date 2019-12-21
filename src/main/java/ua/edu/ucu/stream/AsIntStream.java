@@ -40,7 +40,13 @@ public class AsIntStream implements IntStream {
     @Override
     public Double average() {
         check();
-        return (double) sum() / count();
+        int len = 0;
+        int sum = 0;
+        for (int val: iterable()){
+            len += 1;
+            sum += val;
+        }
+        return (double) sum/len;
     }
 
     @Override

@@ -10,7 +10,6 @@ public class AsIntStreamIter implements Iterator<Integer> {
 
     public AsIntStreamIter(int... values) {
         array = values.clone();
-
     }
 
     @Override
@@ -20,7 +19,7 @@ public class AsIntStreamIter implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-
         return array[i++];
     }
+
 }
