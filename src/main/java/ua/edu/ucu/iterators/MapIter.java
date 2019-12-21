@@ -7,7 +7,6 @@ import java.util.Iterator;
 public class MapIter implements Iterator<Integer> {
     private Iterator<Integer> toIter;
     private IntUnaryOperator mapper;
-    private int next;
 
     public MapIter(Iterator<Integer> iter, IntUnaryOperator oper) {
         toIter = iter;
@@ -16,7 +15,7 @@ public class MapIter implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        if (toIter.hasNext()){
+        if (toIter.hasNext()) {
             return true;
         }
         return false;
